@@ -11,7 +11,7 @@ export default class Score{
     async getResults(){
         const res = await axios({
             method: 'get',
-            url: `https://cors-anywhere.herokuapp.com/https://api.football-data.org/v2/teams/66/matches?season=${this.query}`,
+            url: `https://cors-anywhere.herokuapp.com/https://api.football-data.org/v2/teams/66/matches?dateFrom=${this.query}-08-11&dateTo=${this.query + 1}-07-26`,
             responseType: 'json',
             headers: {'X-Auth-Token': '3118540e32f344c89e7c68d4156eb75c'},
           })
